@@ -12,6 +12,22 @@ code {
     monospace;
 }
 
+/*HEADER*/
+
+.Header {
+  height: 35px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(103,193,247);
+}
+
+.header-btn {
+  height:20px;
+}
+
+/*MAIN MENU*/
+
 .beer-link {
   text-align: left;
 }
