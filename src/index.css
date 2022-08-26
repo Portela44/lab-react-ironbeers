@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.beer-link {
+  text-align: left;
+}
+
+.beer-link > a {
+  font-size: 2em;
+}
+
+.beer-link > a, .beer-link > p {
+  text-decoration: none;
+  color: black;
+  margin:0 10px 30px 20px
+}
+
+.beer-link > p {
+  font-weight: 200;
+  font-size: 0.9em;
+}
+
+.menu-img {
+  height: 180px;
+}
