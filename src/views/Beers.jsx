@@ -22,17 +22,20 @@ export default function Beers() {
         <div className="beerList">
             {beers && beers.map(beer => {
                 return (
-                    <div className="beer" key={beer._id}>
-                        <div className="beerImg">
-                            <Link to={`/:id`}>
-                                <img src={beer.image_url} alt="{beer.name}"></img>
-                            </Link>
+                    <div>
+                        <div className="beer" key={beer._id}>
+                            <div className="beerImg">
+                                <Link to={`/:id`}>
+                                    <img src={beer.image_url} alt="{beer.name}"></img>
+                                </Link>
+                            </div>
+                            <div className="beerInfo">
+                                <h3>{beer.name}</h3>
+                                <p>{beer.tagline}</p>
+                                <h5>Created by: <span>{beer.name}</span></h5>
+                            </div>
                         </div>
-                        <div className="beerInfo">
-                            <h3>{beer.name}</h3>
-                            <p>{beer.tagline}</p>
-                            <h5>Created by: <span>{beer.name}</span></h5>
-                        </div>
+                        <hr />
                     </div>
                 );
             })}
