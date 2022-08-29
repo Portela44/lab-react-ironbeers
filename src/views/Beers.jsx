@@ -9,7 +9,6 @@ export default function Beers() {
         const getData = async () => {
             try {
                 const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers");
-                console.log(response.data);
                 setBeers(response.data)
             } catch (error) {
                 console.error(error);
@@ -22,10 +21,10 @@ export default function Beers() {
         <div className="beerList">
             {beers && beers.map(beer => {
                 return (
-                    <div>
-                        <div className="beer" key={beer._id}>
+                    <div key={beer._id}>
+                        <div className="beer">
                             <div className="beerImg">
-                                <Link to={`/:id`}>
+                                <Link to={`/${beer._id}`}>
                                     <img src={beer.image_url} alt="{beer.name}"></img>
                                 </Link>
                             </div>
