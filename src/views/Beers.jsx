@@ -16,7 +16,7 @@ export default function Beers() {
         }
         getData();
     },[]);
-
+    
     return (
         <div className="beerList">
             {beers && beers.map(beer => {
